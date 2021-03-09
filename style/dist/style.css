@@ -1,0 +1,543 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  scroll-behavior: smooth;
+}
+
+button {
+  border-radius: 10px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .header_container {
+  width: 100%;
+  height: 100vh;
+  background: url("/img/background_header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+body .header_container .header_inner {
+  width: 90%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+body .header_container .header_inner .header_mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 115%;
+  background-color: #1c1c1b;
+  opacity: 0.5;
+  z-index: 1;
+}
+body .header_container .header_inner .header_logo {
+  width: 10vw;
+  height: 10vw;
+  z-index: 2;
+}
+body .header_container .header_inner .nav {
+  margin-top: 1vw;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 2;
+}
+body .header_container .header_inner .nav .nav_item {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.95vw;
+}
+body .header_container .header_inner .nav .nav_item li {
+  list-style: none;
+}
+body .header_container .header_inner .nav .nav_item:hover {
+  transform: scale(1.15);
+  color: #f84747;
+  transition: all 0.15s ease;
+}
+body .header_container .header_title {
+  height: 50%;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+body .header_container .header_title h1 {
+  font-size: 5.5vw;
+}
+body .header_container .header_title h3 {
+  font-size: 2.6vw;
+}
+body .about_container {
+  background: #fff;
+  width: 100%;
+  height: 35vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+body .about_container h3 {
+  margin-top: 3vw;
+  color: #1c1c1b;
+  font-size: 1.5vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+body .about_container .about_inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  height: 80%;
+}
+body .about_container .about_inner .inner_content_left {
+  height: 100%;
+  width: 30%;
+}
+body .about_container .about_inner .inner_content_left .about_links {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body .about_container .about_inner .inner_content_left .about_links .links_stick {
+  height: 20vw;
+  width: 1.5%;
+  background-color: #f84747;
+  position: relative;
+}
+body .about_container .about_inner .inner_content_left .about_links .links_stick .first {
+  top: 10%;
+  left: 2vw;
+}
+body .about_container .about_inner .inner_content_left .about_links .links_stick .second {
+  top: 45%;
+  right: 2vw;
+}
+body .about_container .about_inner .inner_content_left .about_links .links_stick .third {
+  bottom: 10%;
+  left: 2vw;
+}
+body .about_container .about_inner .inner_content_left .about_links .links_stick .link_social {
+  position: absolute;
+}
+body .about_container .about_inner .inner_content_left .about_links .links_stick .link_social .fa {
+  font-size: 2vw;
+  color: #f84747;
+}
+body .about_container .about_inner .inner_content_left .about_links .links_stick .link_social:hover > .fa {
+  transform: scaleY(1.2) scaleX(1.2);
+}
+body .about_container .about_inner .inner_content_right {
+  height: 100%;
+  width: 30%;
+}
+body .about_container .about_inner .inner_content_right .about_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 70%;
+}
+body .about_container .about_inner .inner_content_right .about_text p {
+  text-align: center;
+  color: #1c1c1b;
+  font-size: 0.9vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300wa;
+}
+body .services_container {
+  width: 100%;
+  height: 35vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+body .services_container .services_title {
+  text-transform: uppercase;
+  width: 15vw;
+  text-align: center;
+  color: #1c1c1b;
+  font-size: 1.5vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+body .services_container .services_inner_slider {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  height: 40w;
+  justify-content: space-around;
+  align-items: center;
+}
+body .services_container .services_inner_slider .slider_item {
+  outline: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+body .services_container .services_inner_slider .slider_item .slider_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+body .services_container .services_inner_slider .slider_item .slider_text h4 {
+  color: #f84747;
+  font-size: 2vw;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+body .services_container .services_inner_slider .slider_item .slider_text .slider_inner_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8vw;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+body .services_container .services_inner_slider .slider_item .slider_text p {
+  font-size: 1vw;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+body .price_container {
+  width: 100%;
+  height: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body .price_container .price_title {
+  margin-top: 5vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 700;
+}
+body .price_container .price_inner {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+body .price_container .price_inner .price_tab {
+  font-family: "Montserrat", sans-serif;
+  width: 25%;
+  height: 100%;
+  border: 1px solid #1c1c1c;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 0.1s ease;
+}
+body .price_container .price_inner .price_tab .subject_price_conteiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body .price_container .price_inner .price_tab .subject_price_conteiner .sup_price {
+  font-size: 1.1vw;
+}
+body .price_container .price_inner .price_tab .subject_price_conteiner .price {
+  font-size: 1.5vw;
+}
+body .price_container .price_inner .price_tab h4 {
+  text-align: center;
+  width: 50%;
+  font-weight: 700;
+  font-size: 1.2vw;
+}
+body .price_container .price_inner .price_tab .sup_price {
+  font-size: 1.1vw;
+}
+body .price_container .price_inner .price_tab .price {
+  font-size: 1.5vw;
+}
+body .price_container .price_inner .price_tab .about_price {
+  display: flex;
+  flex-direction: column;
+  height: 15%;
+  font-size: 0.85vw;
+  justify-content: space-around;
+}
+body .price_container .price_inner .price_tab .about_price a {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+body .price_container .price_inner .price_tab .about_price a li {
+  list-style: none;
+}
+body .price_container .price_inner .price_tab .about_price a:hover {
+  transform: scaleX(1.1) scaleY(1.1);
+  color: #f84747;
+}
+body .price_container .price_inner .price_tab .btn_tab {
+  text-decoration: none;
+  width: 40%;
+  height: 7%;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: solid 1px #1c1c1b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .price_container .price_inner .price_tab .btn_tab p {
+  width: 70%;
+  font-size: 0.75vw;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #1c1c1b;
+}
+body .price_container .price_inner .price_tab .btn_tab:hover {
+  border: none;
+  transform: scaleY(1.1) scaleX(1.1);
+  color: #fff;
+  background-color: #f84747;
+}
+body .price_container .price_inner .price_tab .btn_tab:hover > p {
+  color: #fff;
+}
+body .price_container .price_inner .price_tab:hover {
+  border: grey;
+  transform: scaleX(1.05) scaleY(1.05);
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.22);
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.22);
+}
+body .price_container .price_inner .price_tab:hover > h4 {
+  color: #f84747;
+}
+body .price_container .price_btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  width: 15vw;
+  height: 3vw;
+  outline: none;
+  border: 1px solid #1c1c1c;
+  font-size: 0.85vw;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #fff;
+}
+body .price_container .price_btn:hover {
+  border: none;
+  background-color: #f84747;
+  transform: scaleX(1.1) scaleY(1.1);
+  color: #fff;
+}
+body .client_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 30vw;
+}
+body .client_container h3 {
+  margin-top: 5vw;
+  color: #1c1c1b;
+  font-size: 1.5vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+body .client_container .client_slider {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .client_container .client_slider .client_slider_item {
+  height: 70%;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .contact_container {
+  width: 100%;
+  height: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+body .contact_container .contact_title {
+  text-transform: uppercase;
+  width: 15vw;
+  text-align: center;
+  color: #1c1c1b;
+  font-size: 1.5vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+body .contact_container .contact_inner {
+  width: 70%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+body .contact_container .contact_inner .contact_input {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+body .contact_container .contact_inner .contact_input .contact_input_name {
+  width: 15vw;
+  height: 3vw;
+  outline: none;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 1px solid #fff;
+  font-size: 1.1vw;
+  font-family: "Montserrat", sans-serif;
+}
+body .contact_container .contact_inner .contact_input .contact_input_name:hover {
+  border-bottom: #1c1c1c;
+}
+body .contact_container .contact_inner .contact_input .contact_input_name:hover,
+body .contact_container .contact_inner .contact_input .contact_input_name:focus {
+  border-bottom: #b3b2b2 1px solid;
+}
+body .contact_container .contact_inner .contact_input .contact_input_name:hover::placeholder,
+body .contact_container .contact_inner .contact_input .contact_input_name:focus::placeholder {
+  color: #b3b2b2;
+}
+body .contact_container .contact_inner .contact_input .contact_input_tel {
+  width: 15vw;
+  height: 3vw;
+  outline: none;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 1px solid #fff;
+  font-size: 1.1vw;
+  font-family: "Montserrat", sans-serif;
+}
+body .contact_container .contact_inner .contact_input .contact_input_tel:hover,
+body .contact_container .contact_inner .contact_input .contact_input_tel:focus {
+  border-bottom: #b3b2b2 1px solid;
+}
+body .contact_container .contact_inner .contact_input .contact_input_tel:hover::placeholder,
+body .contact_container .contact_inner .contact_input .contact_input_tel:focus::placeholder {
+  color: #b3b2b2;
+}
+body .contact_container .contact_inner .contact_input .contact_input_btn {
+  text-transform: uppercase;
+  width: 12vw;
+  height: 2.7vw;
+  outline: none;
+  border: #1c1c1b 1px solid;
+  font-weight: 500;
+  font-size: 0.9vw;
+  background-color: #fff;
+}
+body .contact_container .contact_inner .contact_input .contact_input_btn:hover {
+  background-color: #f84747;
+  transform: scaleX(1.1) scaleY(1.1);
+  border: none;
+  color: #fff;
+}
+body .contact_container .contact_inner .contact_stick {
+  height: 50%;
+  width: 0.2vw;
+  background-color: #1c1c1b;
+}
+body .contact_container .contact_inner .contact_social {
+  width: 30%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+body .contact_container .contact_inner .contact_social .fa {
+  font-size: 2vw;
+  color: #1c1c1b;
+}
+body .contact_container .contact_inner .contact_social a {
+  width: 70%;
+  justify-content: space-between;
+  text-decoration: none;
+  font-size: 1vw;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #1c1c1b;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body .contact_container .contact_inner .contact_social a:hover,
+body .contact_container .contact_inner .contact_social a:focus {
+  transform: scaleX(1.1) scaleY(1.1);
+  color: #f84747;
+}
+body .contact_container .contact_inner .contact_social a:hover > .fa,
+body .contact_container .contact_inner .contact_social a:hover > .fa {
+  color: #f84747;
+}
+body .contact_container .contact_inner .contact_social .link_phone {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body footer {
+  width: 100%;
+  height: 13vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body footer .footer_stick {
+  height: 2px;
+  width: 60%;
+  background-color: #1c1c1b;
+}
